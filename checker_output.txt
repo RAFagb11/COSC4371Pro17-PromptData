@@ -1,0 +1,43 @@
+split.csv: 10958 rows. scores.csv: 3265 rows.
+
+Rows per dataset and split
+--------------------------
+  dataset      split  rows  positive  negative  positive %
+  deepset       test   662       263       399       39.73
+safeguard      train  6156      1710      4446       27.78
+safeguard validation  1537       426      1111       27.72
+safeguard       test  2603      1010      1593       38.80
+
+Metrics per test set (threshold 0.1336095960661251; positive when score >= threshold)
+-------------------------------------------------------------------------------------
+Each value is followed by its 95% bootstrap interval in brackets.
+
+Test set: safeguard_test
+  test rows                 2603
+  positive rows             1010 (38.80%)
+  negative rows             1593 (61.20%)
+  bootstrap resamples       1000
+  random-scorer AP          0.3880 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.9265 [0.9108, 0.9429]
+  recall                    0.9980 [0.9950, 1.0000]
+  false-positive rate       0.0502 [0.0389, 0.0610]
+  AP                        0.9994 [0.9988, 0.9999]
+  AUROC                     0.9996 [0.9991, 0.9999]
+
+Test set: deepset_test
+  test rows                 662
+  positive rows             263 (39.73%)
+  negative rows             399 (60.27%)
+  bootstrap resamples       1000
+  random-scorer AP          0.3973 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.8547 [0.7920, 0.9167]
+  recall                    0.3802 [0.3214, 0.4384]
+  false-positive rate       0.0426 [0.0239, 0.0639]
+  AP                        0.6935 [0.6394, 0.7504]
+  AUROC                     0.7292 [0.6887, 0.7685]
+
+Warnings
+--------
+- safeguard_test: recall, AP, AUROC at or above 0.99. Name the leakage check you ran and its result in section 3(e).
