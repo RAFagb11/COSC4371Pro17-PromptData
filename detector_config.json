@@ -1,0 +1,39 @@
+{
+  "detector": "TF-IDF with logistic regression",
+  "status": "fixed configuration for future phases; not trained in Section 2",
+  "representation": {
+    "class": "sklearn.feature_extraction.text.TfidfVectorizer",
+    "lowercase": true,
+    "strip_accents": null,
+    "analyzer": "word",
+    "token_pattern": "(?u)\\b\\w\\w+\\b",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 1,
+    "max_df": 1.0,
+    "max_features": 50000,
+    "sublinear_tf": true,
+    "norm": "l2",
+    "use_idf": true,
+    "smooth_idf": true
+  },
+  "classifier": {
+    "class": "sklearn.linear_model.LogisticRegression",
+    "C": 1.0,
+    "penalty": "l2",
+    "solver": "liblinear",
+    "class_weight": null,
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "fit_rule": "Fit vectorizer and classifier on Safe-Guard training rows only. Never fit vocabulary or IDF on validation or test.",
+  "future_threshold_rule": "Choose threshold on Safe-Guard validation only; freeze before test scoring.",
+  "comparison_rule": "Hold detector family, settings and test assignments fixed across later data-quality conditions. Any retraining changes only the permitted training-data condition. Record that condition explicitly. Do not retune on test.",
+  "scope": [
+    "xTRam1/safe-guard-prompt-injection",
+    "deepset/prompt-injections"
+  ],
+  "future_scikit_learn_version": "1.7.2"
+}
