@@ -1,0 +1,21 @@
+row_id,value,column,category
+deepset:test:10,baseline,deepset_test,Benign topical fragment
+deepset:test:18,baseline,deepset_test,Benign topical fragment
+deepset:train:157,baseline,deepset_test,Benign topical fragment
+deepset:train:75,baseline,deepset_test,Benign topical fragment
+deepset:train:408,baseline,deepset_test,Benign mention of attack term
+deepset:train:65,baseline,deepset_test,Benign topical fragment
+deepset:train:28,baseline,deepset_test,Benign topical fragment
+deepset:train:430,baseline,deepset_test,Benign ordinary question
+deepset:test:54,baseline,deepset_test,Benign ordinary question
+deepset:train:337,baseline,deepset_test,Benign topical fragment
+deepset:train:511,baseline,deepset_test,Terminal role-play instruction
+deepset:train:487,baseline,deepset_test,English instruction redirection
+deepset:train:507,baseline,deepset_test,Capability role-play instruction
+deepset:train:283,baseline,deepset_test,Multilingual instruction redirection
+deepset:train:414,baseline,deepset_test,Multilingual instruction redirection
+deepset:test:91,baseline,deepset_test,Multilingual instruction redirection
+deepset:train:541,baseline,deepset_test,Multilingual instruction redirection
+deepset:train:258,baseline,deepset_test,Terminal role-play instruction
+deepset:train:440,baseline,deepset_test,English instruction redirection
+deepset:train:526,baseline,deepset_test,Multilingual instruction redirection
